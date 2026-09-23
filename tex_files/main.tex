@@ -1,5 +1,5 @@
 
-\documentclass[14pt,a4paper]{article}
+\documentclass[14pt]{article}
 \usepackage{pgf}
 \usepackage{underscore}
 \usepackage{amssymb}
@@ -10,11 +10,12 @@
 \usepackage{setspace}
 \usepackage{hyperref}
 \usepackage{listings}
-\usepackage[fontsize=13pt]{fontsize}
+\usepackage[fontsize=14pt]{fontsize}
 \onehalfspacing{}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{tikz}
+\usepackage{graphicx}
 \usetikzlibrary{automata, positioning, arrows}
 %\setmainfont[Ligatures=TeX]{TeX Gyre Pagella}
 %\setsansfont{TeX Gyre Heros}
@@ -32,7 +33,7 @@
 \begin{titlepage}
 	\begin{center}
 
-		\textbf{\LARGE Project 1: \\ Housing price model} \\
+		\textbf{\LARGE Project 1: \\ Supervised Learning } \\
 
 		\textbf{\Large alfar24@ru.is} \\
 	\end{center}
@@ -57,10 +58,15 @@ There's a total of 4,600 houses in the data set, each holding the square footage
 whether or not it has a waterfront and the rating of the view. The benchmark I'm going to be using is a normal Linear Regression, which is a common baseline for datasets like this.  \\
 A linear regression requires a dataset of only numerical values; the dataset that I chose has some string values in it, which cant be used in a linear regression.
 The problematic values here are "date", "street", "city" and "statezip". We can thankfully just drop the street attribute, as every single one of the values in it is unique.
-We can split the date into 2 attributes (day and month), the year is in tentionally dropped here as the entire data range spans over less than a year, so it would actively hurt some models. \\
+We can split the date into 2 attributes (day and month), the year is in tentionally dropped here as the entire data range spans over less than a year, so it would actively hurt some models.
 For the "city" attribute, we can use a "one-hot" method on it, which turns each category into a boolean value, the only drawback here is that it shoots the dimensionality of the dataset up by quite a bit, from 18 to 60.
 The most problematic of the string values is the "statezip" value. We can use a one-hot method on this as well, but this attribute shoots the  dimensionality up even higher than the city attribute, from 60 to 136.
-Which is an increase of 62 features, vs. the increase of 42 with the city feature.
+Which is an increase of 62 features, vs. the increase of 42 with the city feature. The resulting Linear Regression gave us an accuaracy of $~30\%$ with training data, and an accuracy of $~60\%$ with testing data.
+I also calculated the standard-deviations of the price to be $\$427{,}379.5$ for the training data, and $\$927{,}053.6$ for the testing data. This is also an extraodinary range, and it clearly hints that the dataset has a few outliers. 
+I made a graph for the prices so I could see if this was the case:
+\begin{center}
+	\includegraphics[width=1\textwidth]{prices.png}
+\end{center}
 \section{Process}
 \section{Results}
 \section{Conclusion}

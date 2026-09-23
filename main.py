@@ -1,6 +1,7 @@
 import kagglehub
 import pandas as pd
 import seaborn as sb
+import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split, cross_validate, GridSearchCV
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
@@ -9,11 +10,18 @@ from sklearn.linear_model import LinearRegression
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import Pipeline
 from sklearn.metrics import mean_absolute_error, root_mean_squared_error
+from sklearn.model_selection import ShuffleSplit
 
 path = kagglehub.dataset_download("debayank2024/house-price-prediction")
 
 knn_copy = pd.read_csv(path + "/modified_data.csv")
 
+print(knn_copy["price"].describe())
+print(knn_copy["price"].sort_values(ascending=False).head(20))
+print((knn_copy["price"] == 0).sum())
+
+sb.histplot(knn_copy["price"], bins=50)
+plt.show()
 
 # convert date to integer values so i can properly work with it
 # not using year as the data is all within the same year
@@ -23,6 +31,7 @@ knn_copy["day"] = knn_copy["date"].dt.day
 knn_copy = knn_copy.drop(columns=["date"])
 
 print(len(knn_copy.columns))
+
 
 encoded_knn_copy = pd.get_dummies(
     knn_copy, columns=["city", "statezip"], drop_first=True
@@ -38,21 +47,30 @@ for column in z_scaled_training_set.columns:
     ) / z_scaled_training_set[column].std()
 
 
-target = encoded_knn_copy.price
 features = z_scaled_training_set
 # droping street as it is essentially a id, all are unique.
 # price_per_sqft is just another copy of price, i can calculate it later if i need it
+target = np.log1p(encoded_knn_copy.price)
 
+price_bins = pd.qcut(target, q=10, labels=False, duplicates="drop")
 
 training_set_features, testing_set_features, training_set_target, testing_set_target = (
     train_test_split(
-        features, target, test_size=0.2, random_state=10
+        features, target, test_size=0.2, random_state=985, stratify=price_bins
     )  # 20% is the convention, might change as i do more testing
 )
 
+cv = ShuffleSplit(n_splits=30, test_size=0.2, random_state=30)
 LR = LinearRegression()
 cross_validation_lr = cross_validate(
-    LR, training_set_features, training_set_target, cv=5
+    LR, training_set_features, training_set_target, cv=cv, scoring="r2"
+)
+print("mean:", cross_validation_lr["test_score"].mean())
+print("std:", cross_validation_lr["test_score"].std())
+print(
+    "min/max:",
+    cross_validation_lr["test_score"].min(),
+    cross_validation_lr["test_score"].max(),
 )
 
 print("cross_val_lr: ", cross_validation_lr)
