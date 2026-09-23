@@ -30,7 +30,13 @@ knn_copy["month"] = knn_copy["date"].dt.month
 knn_copy["day"] = knn_copy["date"].dt.day
 knn_copy = knn_copy.drop(columns=["date"])
 
+knn_copy = knn_copy[
+    knn_copy["price"] > 0
+]  # Remove houses with 0 price value, these are actual outliers, as opposed to the very high value houses
 print(len(knn_copy.columns))
+
+print((knn_copy["price"] == 0).sum())
+print(knn_copy["price"].sort_values().head(20))
 
 
 encoded_knn_copy = pd.get_dummies(
@@ -51,7 +57,6 @@ features = z_scaled_training_set
 # droping street as it is essentially a id, all are unique.
 # price_per_sqft is just another copy of price, i can calculate it later if i need it
 target = np.log1p(encoded_knn_copy.price)
-
 price_bins = pd.qcut(target, q=10, labels=False, duplicates="drop")
 
 training_set_features, testing_set_features, training_set_target, testing_set_target = (

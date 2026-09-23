@@ -67,7 +67,12 @@ I made a graph for the prices so I could see if this was the case:
 \begin{center}
 	\includegraphics[width=1\textwidth]{prices.png}
 \end{center}
-There's a couple clear outliers in the data, a house that costs a whopping $\$26{,}000{,}000 $ million dollars, as well as some others between that, while most of the houses lie in the $\$300-400k $ Dollar range.
+There's a couple clear outliers in the data, a house that costs a whopping $\$26{,}000{,}000 $ million Dollars, as well as some others between that, while most of the houses lie in the $\$300k-400k$ Dollar range.
+This graph unfortunately does not show all the houses with a price of \$0, but there's a total of 49 properties with a listed price 0, this heavily skews the standard-deviation and hurts the model performance.
+For the 0 values, we can just remove the values, since 0 does not reflect the actual value of the property (low bid or perhaps given away). 
+For the extreme values, we can take the logarithm of them, this will scale everything down to the same range. The resulting score of the regression model is 0.805 for the training data, and 0.774 for the testing data.
+These will be our Benchmarks.
+
 \section{Process}
 \section{Results}
 \section{Conclusion}

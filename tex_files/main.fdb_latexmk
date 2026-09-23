@@ -1,5 +1,5 @@
 # Fdb version 4
-["lualatex"] 1790187761.98561 "main.tex" "main.pdf" "main" 1790187762.73911 0
+["lualatex"] 1790196875.77623 "main.tex" "main.pdf" "main" 1790196876.47506 0
   "/home/alfa/.texlive2025/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc" 1789674369.8997 127309 4c98d2f049c54f1fa860da8f2be1c9ce ""
   "/home/alfa/.texlive2025/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-bold.luc" 1788779907.6641 128281 3110848148fd4869f4da3dc903d2ad9e ""
   "/home/alfa/.texlive2025/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-regular.luc" 1788779907.5471 127652 e57213fe0a9a0ee95c81392a5700528a ""
@@ -21,6 +21,7 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy7.tfm" 1136768653 1120 2b3f9b25605010c69bc328bea6ac000f ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1248133631 36741 fa121aac0049305630cf160b86157ee4 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty" 1576625341 40635 c40361e206be584d448876bba8a64a3b ""
   "/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty" 1576016050 33961 6b5c75130e435b2bfdb9f480a09a39f9 ""
@@ -211,10 +212,10 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1788807602 165211 6b08d096f3d0fe5ff6b266061a2b45e0 ""
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1788807605 5656626 ffc86094652d048c7bc3f928dfeb7197 ""
   "Reykjavik_University_Logo.png" 1790183545.09694 98378 df3dc13289c0ba6f8240d1c4a9e04dd2 ""
-  "main.aux" 1790187762.6759 713 b85b0d088560c8822280a4e40fcc8be0 "lualatex"
-  "main.out" 1790187762.67618 453 39b5f5eaa73348ead6ae8a658d5512da "lualatex"
-  "main.tex" 1790187761.89746 3529 3dabe1fe133dbc7496931dfe21af318e ""
-  "main.toc" 1790187762.67618 327 64cd19e95b6f55bb3fb289f91037825f "lualatex"
+  "main.aux" 1790196876.41036 713 b85b0d088560c8822280a4e40fcc8be0 "lualatex"
+  "main.out" 1790196876.41084 453 39b5f5eaa73348ead6ae8a658d5512da "lualatex"
+  "main.tex" 1790196874.44303 4342 e58614d9cef70ad9025e648f038ec22e ""
+  "main.toc" 1790196876.41084 327 64cd19e95b6f55bb3fb289f91037825f "lualatex"
   "prices.png" 1790186893.28474 18032 a30f247f545ee81cab579800a1fdc4fb ""
   (generated)
   "main.aux"
