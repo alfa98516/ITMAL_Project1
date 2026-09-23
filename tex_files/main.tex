@@ -54,8 +54,13 @@
 The dataset that I chose is the \href{https://www.kaggle.com/datasets/debayank2024/house-price-prediction}{House Price Prediction} dataset,
 I want to create a model that can effectively predict the price of a house based on its attributes. The dataset I chose gives us a plethora of features to work with.
 There's a total of 4,600 houses in the data set, each holding the square footage, number of bathrooms, number of bedrooms, how many floors, the condition it is in, the date it was sold,
-whether or not it has a waterfront and the rating of the view. The benchmark here would be computing the average price of houses, that will be the minimum for a model.
-
+whether or not it has a waterfront and the rating of the view. The benchmark I'm going to be using is a normal Linear Regression, which is a common baseline for datasets like this.  \\
+A linear regression requires a dataset of only numerical values; the dataset that I chose has some string values in it, which cant be used in a linear regression.
+The problematic values here are "date", "street", "city" and "statezip". We can thankfully just drop the street attribute, as every single one of the values in it is unique.
+We can split the date into 2 attributes (day and month), the year is in tentionally dropped here as the entire data range spans over less than a year, so it would actively hurt some models. \\
+For the "city" attribute, we can use a "one-hot" method on it, which turns each category into a boolean value, the only drawback here is that it shoots the dimensionality of the dataset up by quite a bit, from 18 to 60.
+The most problematic of the string values is the "statezip" value. We can use a one-hot method on this as well, but this attribute shoots the  dimensionality up even higher than the city attribute, from 60 to 136.
+Which is an increase of 62 features, vs. the increase of 42 with the city feature.
 \section{Process}
 \section{Results}
 \section{Conclusion}

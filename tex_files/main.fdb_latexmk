@@ -1,5 +1,5 @@
 # Fdb version 4
-["lualatex"] 1790089880.58029 "main.tex" "main.pdf" "main" 1790089882.4005 0
+["lualatex"] 1790179598.89476 "main.tex" "main.pdf" "main" 1790179600.56188 0
   "/home/alfa/.texlive2025/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc" 1789658920.78918 127309 4c98d2f049c54f1fa860da8f2be1c9ce ""
   "/home/alfa/.texlive2025/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-bold.luc" 1788782559.96548 128281 3110848148fd4869f4da3dc903d2ad9e ""
   "/home/alfa/.texlive2025/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-regular.luc" 1788782559.82148 127652 e57213fe0a9a0ee95c81392a5700528a ""
@@ -194,10 +194,10 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1765398601 5467255 9a64d1b40e0b893fc5588ecce9d8accf ""
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1765398610 5712951 391fca4de77304afef8aeb06e99c8a09 ""
   "Reykjavik_University_Logo.png" 1790078419.80947 98378 df3dc13289c0ba6f8240d1c4a9e04dd2 ""
-  "main.aux" 1790089882.24655 713 a6fe78f90699ac7b5035a1a0c60adf2d "lualatex"
-  "main.out" 1790089882.24655 453 39b5f5eaa73348ead6ae8a658d5512da "lualatex"
-  "main.tex" 1790089879.13051 1943 8db41cdc3f5b067669748481c04e159c ""
-  "main.toc" 1790089882.24655 327 fbe2247d1e0275582fd5d932a0d12e35 "lualatex"
+  "main.aux" 1790179600.43187 713 27749cd25f2581db302b16813b0b0574 "lualatex"
+  "main.out" 1790179600.43187 453 39b5f5eaa73348ead6ae8a658d5512da "lualatex"
+  "main.tex" 1790179598.6719 2709 2dad3b81f4ac6de434ab2ee7f71b75d2 ""
+  "main.toc" 1790179600.43187 327 f9b663744d93eca89cd75b0155051f64 "lualatex"
   (generated)
   "main.aux"
   "main.log"
