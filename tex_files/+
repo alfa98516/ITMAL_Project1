@@ -9,8 +9,6 @@
 \usepackage{color}
 \usepackage{setspace}
 \usepackage{hyperref}
-\usepackage[table]{xcolor}
-\usepackage[dvipsnames]{xcolor}
 \usepackage{listings}
 \usepackage[fontsize=14pt]{fontsize}
 \onehalfspacing{}
@@ -79,20 +77,10 @@ I also calculated an RMSE of 0.269 and a MAE of 0.165 in the logarithmic scale. 
 which I can't really justify, as they do actually represent real house prices, unlike the zero-price values. 
 Considering everything, these will be our benchmarks.
 \section{Process}
-I found an excelent reasearch paper written in the Jorunal of Research Innovation and Technologie\cite{Housing-ML}. It specifically talks about predicting house prices with machine learning, which is exactly the problem I'm trying to solve.
-In their reasearch results, the Extra Tree algorithm performed best each time, with Random Forest and Gradient Boosting usually landing in second and third respectively. The best option here would probably be the Extra Tree algorithm,
-but since we haven't covered that algorithm in the course, I went with the Random Forest algorithm and the Gradient Boost algorithm. The accuracy of the Random Forest algorithm never performed much worse than the extra tree one ($97\%$ vs. $99\%$), so I think it should suffice.
-
-
+The initial model I will be choosing is a Random Forest. I was initially thinking of choosing KNN (since I really like KNN models), but I did a bit of reasearch on what type of model would be best for this type of problem.
+I found an excelent reasearch paper written in the Jorunal of Research Innovation and Technologie\cite{}, 
 
 \section{Results}
 \section{Conclusion}
 \section{Future Work}
-\section{Sources}
-\begin{thebibliography}{9}
-
-\bibitem{Housing-ML}
-Ogundeji, G. A., Pitts, D. D. A., Sun, Y., \& Ghafoor, M. (2024). \emph{Predicting UK Housing Price using Machine Learning Algorithms.} J. Res. Innov. Technol., 3(1), 67-85. \textcolor{RoyalBlue}{\url{https://doi.org/10.57017/jorit.v3.1(5).05}}
-\end{thebibliography}
-
 \end{document}
