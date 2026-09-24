@@ -112,5 +112,14 @@ params = {
 print("train:", LR.score(training_set_features, training_set_target))
 print("test:", LR.score(testing_set_features, testing_set_target))
 
+
+print()
 print("train price std:", training_set_target.std())
 print("test price std:", testing_set_target.std())
+print()
+preds_log = LR.predict(testing_set_features)
+preds_dollars = np.expm1(preds_log)
+actual_dollars = np.expm1(testing_set_target)
+
+print("MAE ($):", mean_absolute_error(actual_dollars, preds_dollars))
+print("RMSE ($):", root_mean_squared_error(actual_dollars, preds_dollars))
