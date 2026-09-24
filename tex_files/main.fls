@@ -60,7 +60,6 @@ INPUT /usr/share/texlive/texmf-dist/tex/luatex/luaotfload/luaotfload-tounicode.l
 INPUT /usr/share/texlive/texmf-dist/tex/luatex/luaotfload/luaotfload-case.lua
 INPUT /usr/share/texlive/texmf-dist/tex/luatex/luaotfload/luaotfload-bcp47.lua
 INPUT /usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.lua
-INPUT /usr/share/texlive/texmf-dist/tex/luatex/lua-uni-algos/lua-uni-stage-tables.lua
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
 INPUT /home/alfa/.texlive2025/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz
@@ -158,7 +157,9 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 INPUT /usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
 INPUT /usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hluatex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 INPUT /usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty

@@ -1,5 +1,3 @@
-from os import wait
-
 import kagglehub
 import pandas as pd
 import seaborn as sb
@@ -18,7 +16,6 @@ from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.linear_model import LinearRegression
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.pipeline import Pipeline
 from sklearn.metrics import (
     mean_absolute_error,
     root_mean_squared_error,

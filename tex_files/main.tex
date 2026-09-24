@@ -76,12 +76,16 @@ For the zero-price values, we can simply remove these rows, since \$0 does not r
 For the extreme values, we can take the logarithm of them, which compresses the right-skewed tail and reduces the influence of the outliers. The resulting $R^2$ score of the regression model is 0.805 for the training data, and 0.774 for the testing data.
 I also calculated an RMSE of 0.269 and a MAE of 0.165 in the logarithmic scale. For the actual Dollar value, I got a MAE of $\$110{,}188.80$ and an RMSE of $\$486{,}176.91$. This may look like a significant difference at first,
 	but it makes sense: RMSE penalizes larger errors more heavily than MAE does, and the largest values in our dataset are $>10\times$ the average. We can't do much about this gap without removing the extreme values,
-which I can't really justify, as they do actually represent real house prices, unlike the zero-price values. 
-Considering everything, these will be our benchmarks.
-\section{Process}
-I found an excelent reasearch paper written in the Jorunal of Research Innovation and Technologie\cite{Housing-ML}. It specifically talks about predicting house prices with machine learning, which is exactly the problem I'm trying to solve.
-In their reasearch results, the Extra Tree algorithm performed best each time, with Random Forest and Gradient Boosting usually landing in second and third respectively. The best option here would probably be the Extra Tree algorithm,
-but since we haven't covered that algorithm in the course, I went with the Random Forest algorithm and the Gradient Boost algorithm. The accuracy of the Random Forest algorithm never performed much worse than the extra tree one ($97\%$ vs. $99\%$), so I think it should suffice.
+	which I can't really justify, as they do actually represent real house prices, unlike the zero-price values.
+	Considering everything, these will be our benchmarks.
+	\pagebreak
+	\section{Process}
+
+	I found an excellent research paper written in the Jorunal of Research Innovation and Technologie\cite{Housing-ML}. It specifically talks about predicting house prices with machine learning, which is exactly the problem I'm trying to solve.
+	In their reasearch results, the Extra Tree algorithm performed best each time, with Random Forest and Gradient Boosting usually landing in second and third respectively. The best option here would probably be the Extra Tree algorithm,
+	but since we haven't covered that algorithm in the course, I went with the Random Forest algorithm and the Gradient Boost algorithm. The accuracy of the Random Forest algorithm never performed much worse than the extra tree one ($97\%$ vs. $99\%$), so I think it should suffice.
+	I decided to go with a 80/20 split on the data, $80\%$ for the training, and $20\%$ for the testing. The dataset I have is rather small, so I need to concentrate most of it to train my model. When I was first setting up my linear regression,
+	I saw that the $R^2$ fluctuated wildly based on the random state I used, from $0.6$ - $0.06$
 
 
 
@@ -91,8 +95,8 @@ but since we haven't covered that algorithm in the course, I went with the Rando
 \section{Sources}
 \begin{thebibliography}{9}
 
-\bibitem{Housing-ML}
-Ogundeji, G. A., Pitts, D. D. A., Sun, Y., \& Ghafoor, M. (2024). \emph{Predicting UK Housing Price using Machine Learning Algorithms.} J. Res. Innov. Technol., 3(1), 67-85. \textcolor{RoyalBlue}{\url{https://doi.org/10.57017/jorit.v3.1(5).05}}
+	\bibitem{Housing-ML}
+	Ogundeji, G. A., Pitts, D. D. A., Sun, Y., \& Ghafoor, M. (2024). \emph{Predicting UK Housing Price using Machine Learning Algorithms.} J. Res. Innov. Technol., 3(1), 67-85. \textcolor{RoyalBlue}{\url{https://doi.org/10.57017/jorit.v3.1(5).05}}
 \end{thebibliography}
 
 \end{document}
