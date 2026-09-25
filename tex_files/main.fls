@@ -223,6 +223,7 @@ INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT /home/alfa/.texlive2025/texmf-var/luatex-cache/generic/fonts/otl/lmroman17-regular.luc
 INPUT ./main.toc
 OUTPUT main.toc
+INPUT /home/alfa/.texlive2025/texmf-var/luatex-cache/generic/fonts/otl/lmmono12-regular.luc
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
@@ -246,10 +247,12 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-INPUT ./prices.png
-INPUT ./prices.png
 INPUT /home/alfa/.texlive2025/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-italic.luc
-INPUT /home/alfa/.texlive2025/texmf-var/luatex-cache/generic/fonts/otl/lmmono12-regular.luc
+INPUT ./prices.png
+INPUT ./prices.png
+INPUT /home/alfa/.texlive2025/texmf-var/luatex-cache/generic/fonts/otl/lmroman7-regular.luc
+INPUT /home/alfa/.texlive2025/texmf-var/luatex-cache/generic/fonts/otl/lmmono10-regular.luc
+INPUT /home/alfa/.texlive2025/texmf-var/luatex-cache/generic/fonts/otl/lmmono8-regular.luc
 INPUT ./main.aux
 INPUT ./main.out
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb

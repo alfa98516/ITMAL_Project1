@@ -1,4 +1,5 @@
 import kagglehub
+import time
 import pandas as pd
 import seaborn as sb
 import numpy as np
@@ -30,13 +31,21 @@ path = kagglehub.dataset_download("debayank2024/house-price-prediction")
 
 LR_copy = pd.read_csv(path + "/modified_data.csv")
 
-
+print(LR_copy["price"].mean())
+print((LR_copy["price"] > 25000000).sum())
 # convert date to integer values so i can properly work with it
 # not using year as the data is all within the same year
 LR_copy["date"] = pd.to_datetime(LR_copy["date"])
 LR_copy["month"] = LR_copy["date"].dt.month
 LR_copy["day"] = LR_copy["date"].dt.day
 LR_copy = LR_copy.drop(columns=["date"])
+LR_copy["was_renovated"] = (LR_copy["yr_renovated"] > 0).astype(int)
+LR_copy["effective_year"] = np.where(  # meaning "effective year it was renovated"
+    LR_copy["yr_renovated"] > 0, LR_copy["yr_renovated"], LR_copy["yr_built"]
+)
+LR_copy["age_at_sale"] = LR_copy["yr_built"] - LR_copy["effective_year"]
+LR_copy.drop(columns=["yr_renovated"])
+
 
 LR_copy = LR_copy[
     LR_copy["price"] > 0
@@ -54,7 +63,10 @@ for column in z_scaled_training_set.columns:
         z_scaled_training_set[column] - z_scaled_training_set[column].mean()
     ) / z_scaled_training_set[column].std()
 
-
+print()
+print(len(encoded_LR_copy.columns))
+print(len(LR_copy.columns))
+print()
 features = z_scaled_training_set
 # droping street as it is essentially a id, all are unique.
 # price_per_sqft is just another copy of price, i can calculate it later if i need it
@@ -94,16 +106,18 @@ prep = ColumnTransformer(
     ],
     remainder="passthrough",
 )
+base_RF = RandomForestRegressor(n_estimators=300, random_state=985, n_jobs=-1)
 rf_pipe = Pipeline(
     [
         ("prep", prep),
-        ("model", RandomForestRegressor(n_estimators=300, random_state=985, n_jobs=-1)),
+        ("model", base_RF),
     ]
 )
+base_XGB = XGBRegressor(random_state=985, n_jobs=-1)
 xgb_pipe = Pipeline(
     [
         ("prep", prep),
-        ("model", XGBRegressor(random_state=985, n_jobs=-1)),
+        ("model", base_XGB),
     ]
 )
 
@@ -134,31 +148,31 @@ print(
     rf_pipe.score(testing_set_featuresRF, testing_set_targetRF),
 )
 param_xgb = {
-    "model__n_estimators": [200, 400, 800],
-    "model__learning_rate": [0.01, 0.03, 0.05, 0.1],
-    "model__max_depth": [3, 4, 6, 8],
-    "model__min_child_weight": [1, 3, 5],
-    "model__subsample": [0.7, 0.85, 1.0],
-    "model__colsample_bytree": [0.5, 0.7, 1.0],
-    "model__reg_lambda": [1, 5, 10],
+    # "model__n_estimators": [200, 400, 800],
+    # "model__learning_rate": [0.01, 0.03, 0.05, 0.1],
+    # "model__max_depth": [3, 4, 6, 8],
+    # "model__min_child_weight": [1, 3, 5],
+    # "model__subsample": [0.7, 0.85, 1.0],
+    # "model__colsample_bytree": [0.5, 0.7, 1.0],
+    # "model__reg_lambda": [1, 5, 10],
 }
 
 param_forest = {
-    "model__max_depth": [None, 10, 20, 30],
-    "model__min_samples_leaf": [1, 2, 4, 8],
-    "model__max_features": [0.3, 0.5, 0.7, 1.0],
+    # "model__max_depth": [None, 10, 20, 30],
+    # "model__min_samples_leaf": [1, 2, 4, 8],
+    # "model__max_features": [0.3, 0.5, 0.7, 1.0],
 }
 
-xgb_search = RandomizedSearchCV(xgb_pipe, param_xgb, n_iter=30, cv=5, random_state=985)
-xgb_search.fit(training_set_featuresRF, training_set_targetRF)
-print(xgb_search.best_params_, xgb_search.best_score_)
+# xgb_search = RandomizedSearchCV(xgb_pipe, param_xgb, n_iter=30, cv=5, random_state=985)
+# xgb_search.fit(training_set_featuresRF, training_set_targetRF)
+# print(xgb_search.best_params_, xgb_search.best_score_)
 
-random_forest_search = RandomizedSearchCV(
-    rf_pipe, param_forest, n_iter=20, cv=5, random_state=985
-)
-random_forest_search.fit(training_set_featuresRF, training_set_targetRF)
-print("forest best params: ", random_forest_search.best_params_)
-print("forest best score: ", random_forest_search.best_score_)
+# random_forest_search = RandomizedSearchCV(
+#     rf_pipe, param_forest, n_iter=20, cv=5, random_state=985
+# )
+# random_forest_search.fit(training_set_featuresRF, training_set_targetRF)
+# print("forest best params: ", random_forest_search.best_params_)
+# print("forest best score: ", random_forest_search.best_score_)
 
 
 print("train LR:", LR.score(training_set_featuresLR, training_set_targetLR))
@@ -167,20 +181,29 @@ print("test LR:", LR.score(testing_set_featuresLR, testing_set_targetLR))
 lr_cv = cross_validate(
     LR, training_set_featuresLR, training_set_targetLR, cv=cv, scoring="r2"
 )
+start_rf = time.time()
 rf_cv = cross_validate(
-    random_forest_search.best_estimator_,
+    # random_forest_search.best_estimator_,
+    rf_pipe,
     training_set_featuresRF,
     training_set_targetRF,
     cv=cv,
     scoring="r2",
 )
+end_rf = time.time()
+start_xgb = time.time()
 xgb_cv = cross_validate(
-    xgb_search.best_estimator_,
+    # xgb_search.best_estimator_,
+    xgb_pipe,
     training_set_featuresRF,
     training_set_targetRF,
     cv=cv,
     scoring="r2",
 )
+end_xgb = time.time()
+print("one rf cv: ", end_rf - start_rf)
+print("one xgb cv: ", end_xgb - start_xgb)
+
 
 diff_rf = rf_cv["test_score"] - lr_cv["test_score"]
 diff_xgb = xgb_cv["test_score"] - lr_cv["test_score"]

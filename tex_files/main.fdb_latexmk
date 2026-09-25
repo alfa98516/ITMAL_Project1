@@ -1,11 +1,14 @@
 # Fdb version 4
-["lualatex"] 1790270653.63963 "main.tex" "main.pdf" "main" 1790270654.6281 0
+["lualatex"] 1790359669.22117 "main.tex" "main.pdf" "main" 1790359670.28469 0
+  "/home/alfa/.texlive2025/texmf-var/luatex-cache/generic/fonts/otl/lmmono10-regular.luc" 1790358573.83277 81819 d6a16f977b9306e96e64212936c88691 ""
   "/home/alfa/.texlive2025/texmf-var/luatex-cache/generic/fonts/otl/lmmono12-regular.luc" 1790270633.56568 81754 868275137fa04a4072047bb72af70323 ""
+  "/home/alfa/.texlive2025/texmf-var/luatex-cache/generic/fonts/otl/lmmono8-regular.luc" 1790358573.85277 81422 cdda1705e9d3d6c9619fc914f9480225 ""
   "/home/alfa/.texlive2025/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc" 1789658920.78918 127309 4c98d2f049c54f1fa860da8f2be1c9ce ""
   "/home/alfa/.texlive2025/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-bold.luc" 1788782559.96548 128281 3110848148fd4869f4da3dc903d2ad9e ""
   "/home/alfa/.texlive2025/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-italic.luc" 1790270633.54167 135225 841820d38f241f94bd31879efa2d5f18 ""
   "/home/alfa/.texlive2025/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-regular.luc" 1788782559.82148 127652 e57213fe0a9a0ee95c81392a5700528a ""
   "/home/alfa/.texlive2025/texmf-var/luatex-cache/generic/fonts/otl/lmroman17-regular.luc" 1789658921.02519 128903 8d9ae7dcabfdd2aaa460b77e196097f6 ""
+  "/home/alfa/.texlive2025/texmf-var/luatex-cache/generic/fonts/otl/lmroman7-regular.luc" 1789743981.091 128357 ae83fcdf033c95368bdca6ec3928116a ""
   "/home/alfa/.texlive2025/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz" 1788782559.76147 432289 f237ed5d379ce540250e9a2fd257809c ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -221,10 +224,10 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1765398601 5467255 9a64d1b40e0b893fc5588ecce9d8accf ""
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1765398610 5712951 391fca4de77304afef8aeb06e99c8a09 ""
   "Reykjavik_University_Logo.png" 1790078419.80947 98378 df3dc13289c0ba6f8240d1c4a9e04dd2 ""
-  "main.aux" 1790270654.55061 863 21d034d00e5597061aab36513718af09 "lualatex"
-  "main.out" 1790270654.55061 531 9e9d9f5aae9bb87445f3db5f2e1cfe24 "lualatex"
-  "main.tex" 1790270651.15447 6539 71d21af4bb34f07ebcd5f15a4c9ce2f1 ""
-  "main.toc" 1790270654.55061 390 49b16f7474df9901f945a77e5047a0e8 "lualatex"
+  "main.aux" 1790359670.20512 763 a2fcafa31dabebc7fdf184736834c8c7 "lualatex"
+  "main.out" 1790359670.20512 453 39b5f5eaa73348ead6ae8a658d5512da "lualatex"
+  "main.tex" 1790359667.33295 14170 6016b473917ff05fcc54bbf061659efa ""
+  "main.toc" 1790359670.20512 330 03e9fc00897b6056a04920a418f4d500 "lualatex"
   "prices.png" 1790198577.99193 18032 a30f247f545ee81cab579800a1fdc4fb ""
   (generated)
   "main.aux"

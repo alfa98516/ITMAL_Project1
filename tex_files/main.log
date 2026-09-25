@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2025/dev/Debian)  (format=lualatex 2025.12.10)  24 SEP 2026 17:24
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2025/dev/Debian)  (format=lualatex 2025.12.10)  25 SEP 2026 18:07
  restricted system commands enabled.
  file:line:error style messages enabled.
 **main.tex
@@ -606,7 +606,7 @@ Package hyperref Info: Link coloring OFF on input line 35.
 
 \openout4 = main.out
 \c@lstlisting=\count331
-<Reykjavik_University_Logo.png, id=31, 231.0231pt x 234.3957pt>
+<Reykjavik_University_Logo.png, id=27, 231.0231pt x 234.3957pt>
 File: Reykjavik_University_Logo.png Graphic file (type png)
 <use Reykjavik_University_Logo.png>
 Package luatex.def Info: Reykjavik_University_Logo.png  used on input line 45.
@@ -624,53 +624,108 @@ Package luatex.def Info: Reykjavik_University_Logo.png  used on input line 45.
 
 warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
 [1]
-LaTeX Font Info:    Calculating math sizes for size <14> on input line 67.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 67.
+Underfull \hbox (badness 10000) in paragraph at lines 58--64
+
+ []
+
+
+
+[2]
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 76.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 76.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 67.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 76.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
-[2]
+[3]
 <prices.png, id=57, 1244.39906pt x 669.2503pt>
 File: prices.png Graphic file (type png)
 <use prices.png>
-Package luatex.def Info: prices.png  used on input line 71.
+Package luatex.def Info: prices.png  used on input line 82.
 (luatex.def)             Requested size: 345.0pt x 185.54045pt.
 
 
-[3<./prices.png>]
+[4<./prices.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 85--124
 
-[4]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--124
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--124
+
+ []
+
+
+Overfull \hbox (1.17325pt too wide) in paragraph at lines 85--124
+\TU/lmr/m/n/14 The ini-tal train-ing (no hy-per-pa-ram-e-ter tun-ing) of the mod-
+ []
+
+
+Overfull \hbox (43.56752pt too wide) in paragraph at lines 85--124
+\TU/lmtt/m/n/14 max_-depth\TU/lmr/m/n/14 , \TU/lmtt/m/n/14 min_-sample_-leaf \TU/lmr/m/n/14 and \TU/lmtt/m/n/14 max_-features\TU/lmr/m/n/14 , \TU/lmtt/m/n/14 n_-estimators
+ []
+
+
+Overfull \hbox (0.13272pt too wide) in paragraph at lines 85--124
+\TU/lmtt/m/n/14 min_-samples_-split \TU/lmr/m/n/14 is also a re-dun-tent para-mater to tune,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--124
+
+ []
+
+
+Overfull \hbox (4.72311pt too wide) in paragraph at lines 85--124
+\TU/lmtt/m/n/14 estimators\TU/lmr/m/n/14 , \TU/lmtt/m/n/14 max_-depth\TU/lmr/m/n/14 , \TU/lmtt/m/n/14 min_-child_-weight\TU/lmr/m/n/14 , \TU/lmtt/m/n/14 sub_-sample\TU/lmr/m/n/14 ,
+ []
+
+
 
 [5]
 
-[6] (./main.aux)
+[6]
+
+[7]
+
+[8]
+
+[9]
+
+[10]
+
+[11] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 9E9D9F5AAE9BB87445F3DB5F2E1CFE24;531.
+(rerunfilecheck)             Checksum: 39B5F5EAA73348EAD6AE8A658D5512DA;453.
 )
 
 Here is how much of LuaTeX's memory you used:
- 23787 strings out of 475512
+ 23794 strings out of 475512
  100000,1144653 words of node,token memory allocated
  511 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 7 attribute, 56 glue_spec, 7 attribute_list, 2 write nodes
-   avail lists: 2:198,3:102,4:33,5:195,6:20,7:3820,8:41,9:120,10:17,11:168
- 46156 multiletter control sequences out of 65536+600000
- 43 fonts using 2943527 bytes
- 87i,5n,88p,406b,472s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf/fonts/opentype/public/lm/lmmono12-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-italic.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (7 pages, 159996 bytes).
+   avail lists: 2:186,3:134,4:33,5:518,6:17,7:9055,8:41,9:202,10:16,11:516
+ 46159 multiletter control sequences out of 65536+600000
+ 47 fonts using 3459079 bytes
+ 87i,5n,88p,441b,361s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf/fonts/opentype/public/lm/lmroman12-italic.otf></usr/share/texmf/fonts/opentype/public/lm/lmmono12-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on main.pdf (12 pages, 173972 bytes).
 
-PDF statistics: 128 PDF objects out of 1000 (max. 8388607)
- 98 compressed objects within 1 object stream
- 16 named destinations out of 1000 (max. 131072)
- 64 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 146 PDF objects out of 1000 (max. 8388607)
+ 110 compressed objects within 2 object streams
+ 20 named destinations out of 1000 (max. 131072)
+ 56 words of extra memory for PDF output out of 10000 (max. 100000000)
 
